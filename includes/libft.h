@@ -52,6 +52,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstrev(t_list **alst);
 void				ft_lstswap(t_list **lst1, t_list **lst2);
 void				ft_swap(int *elem1, int *elem2);
+void	ft_2dintdel(int ***atab, int len);
 
 char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
