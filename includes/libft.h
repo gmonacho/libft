@@ -93,6 +93,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
+int					ft_count_char(char *str, int c);
 int					**ft_2dintpushback(int **tab, int len, int *line);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
