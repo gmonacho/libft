@@ -76,7 +76,8 @@ SRC = ./ft_atoi.c\
 	./ft_lstmap.c\
 	./ft_lstnew.c\
 	./ft_swap.c\
-	./ft_2dintdel.c
+	./ft_2dintdel.c\
+	./ft_2dintpushback.c
 
 HEADER = ./includes/libft.h
 
