@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_2dintpushback.c                               .::    .:/ .      .::   */
+/*   get_next_line.h                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: gmonacho <gmonacho@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/11/08 11:44:16 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/08 11:44:18 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/15 12:50:32 by gmonacho     #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/07 17:58:05 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 100
 
-int	**ft_2dintpushback(int **tab, int len, int *line)
-{
-	int	**ntab;
-	int	i;
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
+# include <fcntl.h>
 
-	if (!(ntab = (int**)ft_memalloc(sizeof(int*) * (len + 1))))
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{	
-		ntab[i] = tab[i];
-		i++;
-	}
-	ntab[i] = line;
-	return (ntab);
-}
+#endif
