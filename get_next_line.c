@@ -6,7 +6,7 @@
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/26 21:57:26 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/07 17:58:51 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/09 17:14:40 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -83,7 +83,7 @@ int				get_next_line(const int fd, char **line)
 	t_list			*tmp;
 	char			*tmptofree;
 
-	if (read(fd, buf, 0) == -1)
+	if (read(fd, buf, 0) < 0)
 		return (-1);
 	list = (!list) ? (t_list*)ft_memalloc(sizeof(t_list)) : list;
 	tmp = ft_set_tmp_value(list, fd);

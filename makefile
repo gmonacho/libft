@@ -6,7 +6,7 @@
 #    By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/02 16:01:28 by gmonacho     #+#   ##    ##    #+#        #
-#    Updated: 2018/10/25 19:52:04 by gmonacho    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/25 20:41:05 by gmonacho    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -78,7 +78,13 @@ SRC = ./ft_atoi.c\
 	./ft_swap.c\
 	./ft_2dintdel.c\
 	./ft_count_char.c\
-	./ft_2dintpushback.c
+	./ft_2dintpushback.c\
+	./get_next_line.c\
+	./ft_index.c\
+	./ft_2dputint.c\
+	./ft_tabputint.c\
+	./ft_addtofloat.c \
+	./ft_countnumbers.c
 
 HEADER = ./includes/libft.h
 

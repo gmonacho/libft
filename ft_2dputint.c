@@ -1,17 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_abs.c                                         .::    .:/ .      .::   */
+/*   ft_2dputint.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 17:21:15 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/12 20:35:20 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/08 12:35:00 by gmonacho     #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/08 14:52:36 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-double		ft_abs(double n)
+#include "includes/libft.h"
+#include <stdio.h>
+
+void	ft_2dputint(int **tab, int ilen, int jlen)
 {
-	return (n < 0.0) ? -n : n;
+	int		i;
+	int		j;
+
+	if (tab)
+	{
+		i = 0;
+		while (i < ilen)
+		{
+			j = 0;
+			while (j < jlen)
+			{
+				ft_putnbr(tab[i][j++]);
+				ft_putchar(' ');
+			}
+			ft_putchar('\n');
+			i++;
+		}
+	}
 }

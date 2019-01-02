@@ -1,17 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_abs.c                                         .::    .:/ .      .::   */
+/*   ft_countnumbers.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/08 17:21:15 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/12 20:35:20 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/25 20:23:39 by gmonacho     #+#   ##    ##    #+#       */
+/*   Updated: 2018/12/12 17:25:40 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-double		ft_abs(double n)
+#include "includes/libft.h"
+
+int		ft_countnumbers(char *str)
 {
-	return (n < 0.0) ? -n : n;
+	int		i;
+	int		nb;
+
+	i = 0;
+	nb = 0;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			i++;
+		else
+		{
+			nb++;
+			while (ft_isdigit(str[i]) && str[i])
+				i++;
+		}
+	}
+	return (nb);
 }

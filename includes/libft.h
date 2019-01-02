@@ -6,7 +6,7 @@
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 10:23:36 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/08 11:45:25 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/26 17:47:09 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -52,7 +53,10 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstrev(t_list **alst);
 void				ft_lstswap(t_list **lst1, t_list **lst2);
 void				ft_swap(int *elem1, int *elem2);
-void	ft_2dintdel(int ***atab, int len);
+void				ft_2dintdel(int ***atab, int len);
+void				ft_2dputint(int **tab, int ilen, int jlen);
+void				ft_tabputint(int *tab, int len);
+void				ft_addtofloat(float *nb, float add);
 
 char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
@@ -81,7 +85,7 @@ size_t				ft_tablen(void **tab);
 
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *str);
-int					ft_abs(int n);
+double				ft_abs(double n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
@@ -96,6 +100,8 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_count_char(char *str, int c);
 int					**ft_2dintpushback(int **tab, int len, int *line);
 int					get_next_line(const int fd, char **line);
+int					ft_index(const char *str, int c);
+int					ft_countnumbers(char *str);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
