@@ -6,7 +6,7 @@
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/26 21:57:26 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/09 17:14:40 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/02/07 16:08:19 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -66,7 +66,7 @@ static void		ft_set_line_tmp_value(char **line, t_list **tmp)
 		*line = ft_first_return((*tmp)->content);
 		tmptofree = (*tmp)->content;
 		(*tmp)->content = ft_strdup(tmptofree + ft_index(tmptofree, '\n') + 1);
-		free(tmptofree);
+		ft_strdel(&tmptofree);
 	}
 	else
 	{
@@ -93,7 +93,7 @@ int				get_next_line(const int fd, char **line)
 		buf[nbchar] = '\0';
 		tmptofree = tmp->content;
 		tmp->content = ft_strjoin(tmptofree, buf);
-		free(tmptofree);
+		ft_strdel(&tmptofree);
 	}
 	if (((char*)tmp->content)[0] != '\0')
 	{

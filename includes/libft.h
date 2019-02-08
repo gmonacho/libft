@@ -6,7 +6,7 @@
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 10:23:36 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/25 17:00:26 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/02/07 17:11:04 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -57,6 +57,8 @@ void				ft_2dintdel(int ***atab, int len);
 void				ft_2dputint(int **tab, int ilen, int jlen);
 void				ft_tabputint(int *tab, int len);
 void				ft_addtofloat(float *nb, float add);
+void				ft_intdel(int **tab);
+void				ft_2dstrdel(char ***tab);
 
 char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
@@ -98,7 +100,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_count_char(char *str, int c);
-int					**ft_2dintpushback(int **tab, int len, int *line);
+int					**ft_2dintpushback(int **tab, int size_i, int size_j, int *line);
 int					get_next_line(const int fd, char **line);
 int					ft_index(const char *str, int c);
 int					ft_countnumbers(char *str);

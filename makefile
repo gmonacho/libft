@@ -6,7 +6,7 @@
 #    By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/10/02 16:01:28 by gmonacho     #+#   ##    ##    #+#        #
-#    Updated: 2019/01/25 17:00:51 by gmonacho    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/07 17:11:26 by gmonacho    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -85,13 +85,15 @@ SRC = ./ft_atoi.c\
 	./ft_tabputint.c\
 	./ft_addtofloat.c \
 	./ft_countnumbers.c \
-	./ft_round.c
+	./ft_round.c \
+	./ft_intdel.c \
+	./ft_2dstrdel.c
 
 HEADER = ./includes/libft.h
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra  -Werror
 
 all: $(NAME)
 

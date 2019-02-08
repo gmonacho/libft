@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_2dintdel.c                                    .::    .:/ .      .::   */
+/*   ft_2dstrdel.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/11/08 11:44:06 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/07 17:10:32 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/02/07 17:08:23 by gmonacho     #+#   ##    ##    #+#       */
+/*   Updated: 2019/02/07 17:10:25 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	ft_2dintdel(int ***atab, int len)
+void	ft_2dstrdel(char ***tab)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	while (i < len)
-		free((*atab)[i++]);
-	free(*atab);
-	*atab = NULL;
+	while ((*tab)[i])
+		free((*tab)[i++]);
+	free(*tab);
+	*tab = NULL;
 }
