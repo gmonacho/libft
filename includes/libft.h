@@ -6,7 +6,7 @@
 /*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/03 10:23:36 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2019/02/07 17:11:04 by gmonacho    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/15 18:18:39 by gmonacho    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -53,12 +53,17 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstrev(t_list **alst);
 void				ft_lstswap(t_list **lst1, t_list **lst2);
 void				ft_swap(int *elem1, int *elem2);
-void				ft_2dintdel(int ***atab, int len);
-void				ft_2dputint(int **tab, int ilen, int jlen);
 void				ft_tabputint(int *tab, int len);
 void				ft_addtofloat(float *nb, float add);
 void				ft_intdel(int **tab);
+
 void				ft_2dstrdel(char ***tab);
+void    			ft_2dputendl(const char **str);
+void				ft_2dintdel(int ***atab, int len);
+void				ft_2dputint(int **tab, int ilen, int jlen);
+int					**ft_2dintpushback(int **tab, int size_i, int size_j, int *line);
+char				**ft_2dstrpushback(char **tab, int size_i, char *line);
+int     			ft_2dstrlen(char **tab);
 
 char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
@@ -79,6 +84,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strrchr(const char *s, int c);
+char    			*ft_strrev(char *str);
 
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
@@ -100,7 +106,6 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_count_char(char *str, int c);
-int					**ft_2dintpushback(int **tab, int size_i, int size_j, int *line);
 int					get_next_line(const int fd, char **line);
 int					ft_index(const char *str, int c);
 int					ft_countnumbers(char *str);
