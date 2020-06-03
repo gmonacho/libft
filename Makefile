@@ -6,7 +6,7 @@
 #    By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/02 16:01:28 by gmonacho          #+#    #+#              #
-#    Updated: 2020/05/28 23:17:59 by gal              ###   ########lyon.fr    #
+#    Updated: 2020/06/02 23:15:18 by gal              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME = libft.a
 CC = gcc
 
 SRCS = ./src/ft_atoi.c\
+	./src/ft_atof.c\
 	./src/ft_abs.c\
 	./src/ft_bzero.c\
 	./src/ft_isalnum.c\
@@ -75,6 +76,7 @@ SRCS = ./src/ft_atoi.c\
 	./src/ft_lstiter.c\
 	./src/ft_lstmap.c\
 	./src/ft_lstnew.c\
+	./src/ft_lstlen.c\
 	./src/ft_swap.c\
 	./src/ft_2dintdel.c\
 	./src/ft_count_char.c\

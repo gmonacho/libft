@@ -1,15 +1,15 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: gmonacho <marvin@le-101.fr>                +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/03 10:23:36 by gmonacho     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/15 18:18:39 by gmonacho    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/03 10:23:36 by gmonacho          #+#    #+#             */
+/*   Updated: 2020/06/02 23:14:47 by gal              ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -45,13 +45,6 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 void				ft_memdel(void **ap);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstaddend(t_list **alst, t_list *new);
-void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-void				ft_lstrev(t_list **alst);
-void				ft_lstswap(t_list **lst1, t_list **lst2);
 void				ft_swap(int *elem1, int *elem2);
 void				ft_tabputint(int *tab, int len);
 void				ft_addtofloat(float *nb, float add);
@@ -88,11 +81,11 @@ char    			*ft_strrev(char *str);
 
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-size_t				ft_lstlen(t_list **alst);
 size_t				ft_tablen(void **tab);
 
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *str);
+float				ft_atof(const char *str);
 double				ft_abs(double n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -114,5 +107,13 @@ int					ft_round(double nb);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstsplit(const char *s1, char c);
+size_t				ft_lstlen(t_list **alst);
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstaddend(t_list **alst, t_list *new);
+void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
+void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void				ft_lstrev(t_list **alst);
+void				ft_lstswap(t_list **lst1, t_list **lst2);
 
 #endif
