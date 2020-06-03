@@ -6,7 +6,7 @@
 /*   By: gal <gal@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 16:23:42 by gmonacho          #+#    #+#             */
-/*   Updated: 2020/06/03 10:17:32 by gal              ###   ########lyon.fr   */
+/*   Updated: 2020/06/03 10:19:44 by gal              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,5 @@ float		ft_atof(const char *str)
 			str++;
 		zero_count_dec(str, &fnb);
 	}
-	printf("nb = %f fnb = %f\n", nb, fnb);
 	return ((nb + fnb) * is_neg);
 }
